@@ -81,7 +81,7 @@ resource "aws_route_table_association" "my-lab-route-tb-assos" {
 
 resource "aws_instance" "tesing-resources1" {
   ami = "ami-0ba62214afa52bec7"
-  instance_type = "t2.micro"
+  instance_type = var.instace
   key_name = "kk"
   count = 3
   vpc_security_group_ids = [aws_security_group.my-lab-secugrp.id]
